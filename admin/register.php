@@ -1,3 +1,45 @@
+<?php
+  include("../config/database.php");
+  
+	if (isset($_POST["adname"]) && isset($_POST["ademail"]) && isset($_POST["password"])){
+		$adName = $_POST["adname"];
+		$password = $_POST["password"];
+    $email = $_POST["ademail"];
+
+    $database = new Database();
+    $conn = $database->getConnection();
+    $query  =  "INSERT INTO `admin` ( `adname`, `password`, `email`) VALUES ( ?, ?, ?)";
+    $password = MD5($password);
+    $array = array( $adName, $password, $email);
+    $stmt = $conn->prepare($query);
+    $stmt->execute($array);
+    if ($stmt){
+      $errorCode = $stmt->errorCode();
+      if ($errorCode != 00000) {
+        $statusMsgType = 'alert alert-danger';
+        $statusMsg = '[Database] Something went wrong.';
+      }
+      else{
+        $statusMsgType = 'alert alert-success';
+        $statusMsg = 'Congratulation. Register successful. Click <a href="login.php">here</a> to login';
+      }
+    }
+    else{
+      $statusMsgType = 'alert alert-danger';
+      $statusMsg = '[Database] Something went wrong.';
+    }
+
+    echo '<script type="text/javascript">';
+    echo "console.log(".json_encode($adName).")";
+    echo '</script>';
+  
+  }
+  else {
+    echo '<script type="text/javascript">';
+    echo 'console.log("sai cmnr")';
+    echo '</script>';
+  }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,17 +87,20 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
-                  <form class="form-validate">
+                  <form action="register.php" method="post" class="form-validate">
+                  <?php 
+                    echo !empty($statusMsg)?'<p class="'.$statusMsgType.'">'.$statusMsg.'</p>':''; 
+                  ?>
                     <div class="form-group">
-                      <input id="register-username" type="text" name="registerUsername" required data-msg="Please enter your username" class="input-material">
+                      <input id="register-username" type="text" name="adname" required data-msg="Please enter your username" class="input-material">
                       <label for="register-username" class="label-material">User Name</label>
                     </div>
                     <div class="form-group">
-                      <input id="register-email" type="email" name="registerEmail" required data-msg="Please enter a valid email address" class="input-material">
+                      <input id="register-email" type="email" name="ademail" required data-msg="Please enter a valid email address" class="input-material">
                       <label for="register-email" class="label-material">Email Address      </label>
                     </div>
                     <div class="form-group">
-                      <input id="register-password" type="password" name="registerPassword" required data-msg="Please enter your password" class="input-material">
+                      <input id="register-password" type="password" name="password" required data-msg="Please enter your password" class="input-material">
                       <label for="register-password" class="label-material">password        </label>
                     </div>
                     <div class="form-group terms-conditions">
@@ -63,6 +108,7 @@
                       <label for="register-agree">Agree the terms and policy</label>
                     </div>
                     <div class="form-group">
+                      <!-- <input type="submit" name="submit" value="register" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer"> -->
                       <button id="regidter" type="submit" name="registerSubmit" class="btn btn-primary">Register</button>
                     </div>
                   </form><small>Already have an account? </small><a href="login.html" class="signup">Login</a>

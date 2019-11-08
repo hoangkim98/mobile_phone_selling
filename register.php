@@ -91,32 +91,32 @@
 			echo !empty($statusMsg)?'<p class="'.$statusMsgType.'">'.$statusMsg.'</p>':''; 
 		?>
 		<div class="bor8 m-b-20 how-pos4-parent">
-			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="firstName" placeholder="First Name" onchange="checkLength(firstName, firstNameError)">
+			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="firstName" placeholder="First Name" >
 		</div>
 		<p id="firstNameError" class="error"></p>
 
 		<div class="bor8 m-b-20 how-pos4-parent">
-			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="lastName" placeholder="Last Name" onchange="checkLength(lastName, lastNameError)">			
+			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="lastName" placeholder="Last Name">			
 		</div>
 		<p id="lastNameError" class="error"></p>
 
 		<div class="bor8 m-b-20 how-pos4-parent">
-			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Email" onchange="checkEmail(email, emailError)">			
+			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Email" >			
 		</div>
 		<p id="emailError" class="error"></p>
 
 		<div class="bor8 m-b-20 how-pos4-parent">
-			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="userName" placeholder="User Name" onchange="checkLength(userName, userNameError)">			
+			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="userName" placeholder="User Name" >			
 		</div>
 		<p id="userNameError" class="error"></p>
 
 		<div class="bor8 m-b-20 how-pos4-parent">
-			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password" placeholder="Password" onchange="checkLength(password, passwordError)">		
+			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="password" placeholder="Password" >		
 		</div>
 		<p id="passwordError" class="error"></p>
 
 		<div class="bor8 m-b-20 how-pos4-parent">
-			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="passwordRepeat" placeholder="Repeat Password" onchange="checkRepeat(password, passwordRepeat, passwordRepeatError)">			
+			<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="password" name="passwordRepeat" placeholder="Repeat Password" >			
 		</div>
 		<p id="passwordRepeatError" class="error"></p>
 

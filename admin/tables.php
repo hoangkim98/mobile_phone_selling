@@ -1,35 +1,14 @@
 <?php
-    include_once '../config/database.php';
-    include_once "../objects/user.php";
-    include_once "../objects/order.php";
-    
-    $database = new Database();
-    $db = $database->getConnection();
-
-    $orderInfo = new Order($db);
-    $userInfo = new User($db);
-
-    //$count = $orderInfo->count($_SESSION["id"]);
-    $stmt_order = $orderInfo->getAllInfo();
-    $stmt_user = $userInfo->getAllInfo();
-  //   $i = 1;
-  //   while ($row = $stmt_order->fetch(PDO::FETCH_ASSOC)){
-  //     extract($row);
-  //     // echo '<tr>';
-  //     // echo '<th scope="row">'.$i.'</th>';
-  //     // echo '<td>'.$transaction_id.'</td>';
-  //     // echo '<td>'.$user_id.'</td>';
-  //     // echo '<td>'.$total_cost.'</td>';
-  //     // echo '<td>'.$status.'</td>';
-  //     // echo '<td>'.$created.'</td>';
-  //     // echo '</tr>';
-  //     // $i ++;
-
-  //     echo $transaction_id."|".$user_id."|".$total_cost;
-  // }
-    
+  include("../config/database.php");
+  $database = new Database();
+  $conn = $database->getConnection();
+  $query = "SELECT `id`, `userName`, `email`, `firstName`, `lastName` FROM `users` WHERE 1";
+  $stmt = $conn->prepare($query);
+  $stmt->execute();
+  $queryp = "SELECT `id`, `name`, `description`, `price`, `kind` FROM `products` WHERE 1";
+  $stmtp = $conn->prepare($queryp);
+  $stmtp->execute();
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -57,6 +36,31 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <title>Live Add Edit Delete Datatables Records using PHP Ajax</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <style>
+    body
+    {
+    margin:0;
+    padding:0;
+    background-color:#f1f1f1;
+    }
+    .box
+    {
+    width:1270px;
+    padding:20px;
+    background-color:#fff;
+    border:1px solid #ccc;
+    border-radius:5px;
+    margin-top:25px;
+    box-sizing:border-box;
+    }
+    </style>
   </head>
   <body>
     <div class="page">
@@ -74,7 +78,7 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="index_ad.php" class="navbar-brand d-none d-sm-inline-block">
+                <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
                   <div class="brand-text d-none d-lg-inline-block"><span>Amin </span><strong>&nbsp Shopping</strong></div>
                   <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
@@ -84,7 +88,7 @@
                 <!-- Search-->
                 <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
                 <!-- Logout    -->
-                <li class="nav-item"><a href="login.php" class="nav-link logout"> <span class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
               </ul>
             </div>
           </div>
@@ -97,14 +101,16 @@
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><i class="icon ion-md-person" style="font-size: 250%;"></i></div>
             <div class="title">
-              <h1 class="h4">AMIN</h1>
+              <h1 class="h4">ADMIN</h1>
+              <p>Nhan Vu</p>
             </div>
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
           <ul class="list-unstyled">
-                    <li><a href="index_ad.php"> <i class="icon-home"></i>Home </a></li>
-                    <li class="active"><a href="tables_ad.php"> <i class="icon-grid"></i>Tables </a></li>
-                    <li><a href="forms_ad.php"> <i class="icon-padnote"></i>Forms </a></li>
+                    <li><a href="tables.php"> <i class="icon-home"></i>Home </a></li>
+                    <li class="active"><a href="tables.php"> <i class="icon-grid"></i>Tables </a></li>
+                    <!-- <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li> -->
+                    <li><a href="login.php"> <i class="icon-interface-windows"></i>Login page </a></li>
           </ul>
         </nav>
         <div class="content-inner">
@@ -117,236 +123,132 @@
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index_ad.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
               <li class="breadcrumb-item active">Tables            </li>
             </ul>
           </div>
-          <section class="tables">   
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Total user</h3>
-                    </div>
-                    <div class="card-body">
-                      <div class="table-responsive">
-
-
-                         <table class="table table-striped">
-                          <thead style="background-color:#b2b2b2;color:#fff;">
-                            <tr>
-                              <th>#</th>
-                              <th>Id</th>
-                              <th>UserName</th>
-                              <th>Password</th>
-                              <th>Email</th>
-                              <th>FirstName</th>
-                              <th>LastName</th>
-                              <th>Type</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                         <?php
-                         $i = 1;
-                          while ($row = $stmt_user->fetch(PDO::FETCH_ASSOC)){
-                            extract($row);
-                            
-                            echo '<tr>';
-                            echo '<th scope="row">'.$i.'</th>';
-                            echo '<td>'.$id.'</td>';
-                            echo '<td>'.$userName.'</td>';
-                            echo '<td>'.$password.'</td>';
-                            echo '<td>'.$email.'</td>';
-                            echo '<td>'.$firstName.'</td>';
-                            echo '<td>'.$lastName.'</td>';
-                            echo '<td>'.$type.'</td>';
-                            echo '</tr>';
-                            $i ++;
-                        }
-                        ?>
-                            
-                          </tbody>
-                        </table>
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard2" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Orders</h3>
-                    </div>
-                    <div class="card-body">
-                      <div class="table-responsive">  
-
-                        <table class="table table-striped">
-                          <thead style="background-color:#b2b2b2;color:#fff;">
-                            <tr>
-                              <th>#</th>
-                              <th>Transaction Id</th>
-                              <th>User Id</th>
-                              <th>Total cost</th>
-                              <th>Status</th>
-                              <th>Created</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                         <?php
-                         $i = 1;
-                          while ($row = $stmt_order->fetch(PDO::FETCH_ASSOC)){
-                            extract($row);
-                            echo '<tr>';
-                            echo '<th scope="row">'.$i.'</th>';
-                            echo '<td>'.$transaction_id.'</td>';
-                            echo '<td>'.$user_id.'</td>';
-                            echo '<td>'.$total_cost.'</td>';
-                            echo '<td>'.$status.'</td>';
-                            echo '<td>'.$created.'</td>';
-                            echo '</tr>';
-                            $i ++;
-                        }
-                        ?>
-                            
-                           
-                        
-                          </tbody>
-                        </table>
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Striped table with hover effect</h3>
-                    </div>
-                    <div class="card-body">
-                      <div class="table-responsive">                       
-                        <table class="table table-striped table-hover">
-                          <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter                            </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                        <div aria-labelledby="closeCard4" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Compact Table</h3>
-                    </div>
-                    <div class="card-body">
-                      <div class="table-responsive">   
-                        <table class="table table-striped table-sm">
-                          <thead>
-                            <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter      </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">4</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">5</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">6</th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter      </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="container box">
+            <h1 align="center">User Table
+            <div class="table-responsive">
+            <br />
+              <div align="right">
+              <button type="button" name="add" id="add" class="btn btn-info">Add</button>
               </div>
+              <br />
+              <div id="alert_message"></div>
+              <table id="user_data" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                <th>Frist Name</th>
+                <th>Last Name</th>
+                <th></th>
+                </tr>
+              </thead>
+              </table>
             </div>
-          </section>
+            </div>
+          </body>
+          </html>
+
+          <script type="text/javascript" language="javascript" >
+          $(document).ready(function(){
+            
+            fetch_data();
+
+            function fetch_data()
+            {
+            var dataTable = $('#user_data').DataTable({
+              "processing" : true,
+              "serverSide" : true,
+              "order" : [],
+              "ajax" : {
+              url:"fetch.php",
+              type:"POST"
+              }
+            });
+            }
+            
+            function update_data(id, column_name, value)
+            {
+            $.ajax({
+              url:"update.php",
+              method:"POST",
+              data:{id:id, column_name:column_name, value:value},
+              success:function(data)
+              {
+              $('#alert_message').html('<div class="alert alert-success">'+data+'</div>');
+              $('#user_data').DataTable().destroy();
+              fetch_data();
+              }
+            });
+            setInterval(function(){
+              $('#alert_message').html('');
+            }, 5000);
+            }
+
+            $(document).on('blur', '.update', function(){
+            var id = $(this).data("id");
+            var column_name = $(this).data("column");
+            var value = $(this).text();
+            update_data(id, column_name, value);
+            });
+            
+            $('#add').click(function(){
+            var html = '<tr>';
+            html += '<td contenteditable id="data1"></td>';
+            html += '<td contenteditable id="data2"></td>';
+            html += '<td><button type="button" name="insert" id="insert" class="btn btn-success btn-xs">Insert</button></td>';
+            html += '</tr>';
+            $('#user_data tbody').prepend(html);
+            });
+            
+            $(document).on('click', '#insert', function(){
+            var first_name = $('#data1').text();
+            var last_name = $('#data2').text();
+            if(first_name != '' && last_name != '')
+            {
+              $.ajax({
+              url:"insert.php",
+              method:"POST",
+              data:{first_name:first_name, last_name:last_name},
+              success:function(data)
+              {
+                $('#alert_message').html('<div class="alert alert-success">'+data+'</div>');
+                $('#user_data').DataTable().destroy();
+                fetch_data();
+              }
+              });
+              setInterval(function(){
+              $('#alert_message').html('');
+              }, 5000);
+            }
+            else
+            {
+              alert("Both Fields is required");
+            }
+            });
+            
+            $(document).on('click', '.delete', function(){
+            var id = $(this).attr("id");
+            if(confirm("Are you sure you want to remove this?"))
+            {
+              $.ajax({
+              url:"delete.php",
+              method:"POST",
+              data:{id:id},
+              success:function(data){
+                $('#alert_message').html('<div class="alert alert-success">'+data+'</div>');
+                $('#user_data').DataTable().destroy();
+                fetch_data();
+              }
+              });
+              setInterval(function(){
+              $('#alert_message').html('');
+              }, 5000);
+            }
+            });
+          });
+          </script>
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">

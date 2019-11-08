@@ -1,3 +1,35 @@
+<?php
+  include("../config/database.php");
+  $database = new Database();
+  $conn = $database->getConnection();
+  if (isset($_POST["adname"]) && isset($_POST["password"])){
+    $adName = $_POST["adname"];
+    $password = $_POST["password"];
+    echo '<script type="text/javascript">';
+    echo "console.log(".json_encode($adName).")";
+    echo '</script>';
+    $query  =  "SELECT `ID`, `adname` FROM `admin` WHERE adname = ? AND  password = ? ";
+		$password = MD5($password);
+		$array = array($adName, $password);
+		
+		$stmt = $conn->prepare($query);
+		
+		$stmt->execute($array);
+		
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    
+    if ($row != NULL){
+			$_SESSION["adName"] = $adName;
+			$_SESSION["ID"] = $row["ID"];
+			echo '<script>window.location = "tables.php"</script>';
+		}
+		else{
+			$statusMsgType = 'alert alert-danger';
+      $statusMsg = 'The username or password are incorrect!'; 
+		}
+  }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -45,15 +77,19 @@
             <div class="col-lg-6 bg-white">
               <div class="form d-flex align-items-center">
                 <div class="content">
+                  <?php 
+                    echo !empty($statusMsg)?'<p class="'.$statusMsgType.'">'.$statusMsg.'</p>':''; 
+                  ?>
                   <form method="post" class="form-validate">
+                  
                     <div class="form-group">
-                      <input id="login-username" type="text" name="loginUsername" required data-msg="Please enter your username" class="input-material">
+                      <input id="login-username" type="text" name="adname" required data-msg="Please enter your username" class="input-material">
                       <label for="login-username" class="label-material">User Name</label>
                     </div>
                     <div class="form-group">
-                      <input id="login-password" type="password" name="loginPassword" required data-msg="Please enter your password" class="input-material">
+                      <input id="login-password" type="password" name="password" required data-msg="Please enter your password" class="input-material">
                       <label for="login-password" class="label-material">Password</label>
-                    </div><a id="login" href="index.html" class="btn btn-primary">Login</a>
+                    </div><input type="submit" name="login" value="Login" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
                   </form><a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="register.html" class="signup">Signup</a>
                 </div>
