@@ -104,7 +104,7 @@
 								</span>
 
 								<span class="block1-info stext-102 trans-05">
-									Auntumn 2018
+									Mùa xuân 2020
 								</span>
 							</div>
 
@@ -130,7 +130,7 @@
 								</span>
 
 								<span class="block1-info stext-102 trans-04">
-									Autumn 2018
+									Hè năng động 2020
 								</span>
 							</div>
 
@@ -155,7 +155,7 @@
 								</span>
 
 								<span class="block1-info stext-102 trans-04">
-									New Trend
+									Thiết kế độc đáo
 								</span>
 							</div>
 
