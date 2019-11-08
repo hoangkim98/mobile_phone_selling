@@ -85,7 +85,7 @@
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
-			Contact With Us
+			Liên hệ với chúng tôi
 		</h2>
 	</section>	
 
@@ -98,30 +98,30 @@
 					<form>
 							
 						<h3 class="mtext-105 cl2 txt-center p-b-30 cl11">
-							Send A Message
+							Gửi tin nhắn cho chúng tôi
 						</h3>
 
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="name" placeholder="Your Full Name">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="name" placeholder="Tên của bạn là">
 							<img class="how-pos4 pointer-none" src="images/icons/icon-name.png" alt="mailicon">
 						</div>
 
 						<div class="bor8 m-b-20 how-pos4-parent">
-								<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="phone" placeholder="Your Phone">
+								<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="phone" placeholder="Số điện thoại của bạn">
 								<img class="how-pos4 pointer-none" src="images/icons/icon-phone-call.png" alt="mailicon">
 						</div>
 
 						<div class="bor8 m-b-20 how-pos4-parent">
-							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address">
+							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Địa chỉ email của bạn">
 							<img class="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="mailicon">
 						</div>
 
 						<div class="bor8 m-b-30">
-							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="Write Something Here"></textarea>
+							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="Hãy viết gì đó ở đây"></textarea>
 						</div>
 
 						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
-							Send
+							Gửi
 						</button>
 					</form>
 				</div>
@@ -134,11 +134,11 @@
 
 						<div class="size-212 p-t-2">
 							<span class="mtext-110 cl2">
-								Address
+								Địa chỉ
 							</span>
 
 							<p class="stext-115 cl6 size-213 p-t-18">
-								Laboratory 602 at 6th floor, BachKhoa University
+								Đại học Bách Khoa Thành phố Hồ Chí Minh Cơ sở 2
 							</p>
 						</div>
 					</div>
@@ -150,11 +150,11 @@
 
 						<div class="size-212 p-t-2">
 							<span class="mtext-110 cl2">
-								Telephone Number
+								Số điện thoại
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								+84 426 187985
+								+84 933 039 555
 							</p>
 						</div>
 					</div>
@@ -166,7 +166,7 @@
 
 						<div class="size-212 p-t-2">
 							<span class="mtext-110 cl2">
-								Fax Number
+								Mã phách
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
@@ -182,11 +182,11 @@
 
 						<div class="size-212 p-t-2">
 							<span class="mtext-110 cl2">
-								Sale Support
+								Hỗ trợ bán sĩ
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								support@hcmut.edu.vn
+								phonesharksuport@gmail.com
 							</p>
 						</div>
 					</div>
@@ -210,37 +210,37 @@
 				<div class="row">
 					<div class="col-sm-6 col-lg-3 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30">
-							How Can We Help?
+							Chúng tôi giúp được gì cho bạn?
 						</h4>
 	
 						<ul>
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Delivery
+									Vận chuyển
 								</a>
 							</li>
 	
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Gift Cards
+									Thẻ quà tặng
 								</a>
 							</li>
 	
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Size Guides
+									Hướng dẫn mua hàng
 								</a>
 							</li>
 	
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Women's Plus Size Guide
+									Hướng dẫn chọn điện thoại
 								</a>
 							</li>
 	
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Store Locator
+									Vị trí cửa hàng
 								</a>
 							</li>
 						</ul>
@@ -248,25 +248,25 @@
 	
 					<div class="col-sm-6 col-lg-3 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30">
-							Help
+							Giúp đỡ
 						</h4>
 	
 						<ul>
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Track Order
+									Theo dõi đơn hàng
 								</a>
 							</li>
 	
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Returns 
+									Đổi trả 
 								</a>
 							</li>
 	
 							<li class="p-b-10">
 								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Shipping
+									Vận chuyển
 								</a>
 							</li>
 	
@@ -280,11 +280,11 @@
 	
 					<div class="col-sm-6 col-lg-3 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30">
-							Contact
+							Liên hệ
 						</h4>
 	
 						<p class="stext-107 cl7 size-201">
-							Any questions? Let us know in Laboratory 602 at 6th floor, BachKhoa University or email us: support@hcmut.edu.vn
+							Vui lòng liên hệ qua trang web, số điện thoại hoặc tại văn phòng của chúng tôi ở Đai học Bách Khoa Thành phố Hồ Chí Minh Cở sở 2
 						</p>
 	
 						<div class="p-t-27">
@@ -304,7 +304,7 @@
 	
 					<div class="col-sm-6 col-lg-3 p-b-50">
 						<h4 class="stext-301 cl0 p-b-30">
-							Newsletter
+							Nhận tin khuyến mãi
 						</h4>
 	
 						<form>
@@ -346,7 +346,7 @@
 					</div>
 	
 					<p class="stext-107 cl6 txt-center">
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Template</a>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">OurTeam 	</a>
 	
 					</p>
 				</div>
