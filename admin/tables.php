@@ -2,7 +2,7 @@
   include("../config/database.php");
   $database = new Database();
   $conn = $database->getConnection();
-  $query = "SELECT `id`, `userName`, `email`, `firstName`, `lastName` FROM `users` WHERE 1";
+  $query = "SELECT `id`, `product_id`, `name` FROM `product_images` WHERE 1";
   $stmt = $conn->prepare($query);
   $stmt->execute();
   $queryp = "SELECT `id`, `name`, `description`, `price`, `kind` FROM `products` WHERE 1";
@@ -127,26 +127,89 @@
               <li class="breadcrumb-item active">Tables            </li>
             </ul>
           </div>
-          <div class="container box">
-            <h1 align="center">User Table
+          <div class="card-header d-flex align-items-center">
+            <h3 class="h4">Product Table</h3>
+            
+          </div>
+          <div class="d-flex justify-content-end">
+            <a href="add.php" class="btn btn-info " role="button">Add Product</a>
+            <br/>
+          </div>
+          <div class="card-body">
             <div class="table-responsive">
-            <br />
-              <div align="right">
-              <button type="button" name="add" id="add" class="btn btn-info">Add</button>
-              </div>
-              <br />
-              <div id="alert_message"></div>
-              <table id="user_data" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                <th>Frist Name</th>
-                <th>Last Name</th>
-                <th></th>
-                </tr>
-              </thead>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Descriptions</th>
+                    <th>Price</th>
+                    <th>Kind</th>
+                    <th>Option</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                    while ( $rowp = $stmtp->fetch(PDO::FETCH_ASSOC))
+                    {
+                      echo '<script type="text/javascript">';
+                      echo "console.log(".json_encode($row["id"]).")";
+                      echo '</script>';
+                    echo "<tr>";
+                    echo "<td>".$rowp["id"]."</td>";
+                    echo "<td>".$rowp["name"]."</td>";
+                    echo "<td>".$rowp["description"]."</td>";
+                    echo "<td>".$rowp["price"]."</td>";
+                    echo "<td>".$rowp["kind"]."</td>";
+                    
+                    echo "<td><a href=\"edit.php?id=$rowp[id]\">Edit</a> | <a href=\"delete.php?id=$rowp[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+                    echo "</tr>";
+                  }
+                  ?>
+                </tbody>
               </table>
             </div>
+          </div>
+
+          <div class="card-header d-flex align-items-center">
+            <h3 class="h4">Product Images</h3>
+            
+          </div>
+          <div class="d-flex justify-content-end">
+            <a href="add.php" class="btn btn-info " role="button">Add Product Images</a>
+            <br/>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Produc_ID</th>
+                    <th>Name</th>
+
+                    <th>Option</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                    while ( $row = $stmt->fetch(PDO::FETCH_ASSOC))
+                    {
+                      echo '<script type="text/javascript">';
+                      echo "console.log(".json_encode($row["id"]).")";
+                      echo '</script>';
+                    echo "<tr>";
+                    echo "<td>".$row["product_id"]."</td>";
+                    echo "<td>".$row["name"]."</td>";
+                    
+                    
+                    echo "<td><a href=\"edit.php?id=$row[id]\">Edit</a> | <a href=\"delete.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+                    echo "</tr>";
+                  }
+                  ?>
+                </tbody>
+              </table>
             </div>
+          </div>
           </body>
           </html>
 
