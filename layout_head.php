@@ -89,15 +89,15 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a href="index.php"  id="homee">Home</a>
+								<a href="index.php"  id="homee">Trang chủ</a>
 							</li>
 
 							<li>
-								<a href="products.php" id="shopp">Shop</a>
+								<a href="products.php" id="shopp">Mua sắm</a>
 							</li>
 
 							<li>
-								<a href="shopping-cart.php" id="cartt">Cart</a>
+								<a href="shopping-cart.php" id="cartt">Giỏ hàng</a>
 							</li>
 
 							<li>
@@ -105,11 +105,11 @@
 							</li>
 
 							<li>
-								<a href="about.php" id="aboutt">About</a>
+								<a href="about.php" id="aboutt">Về chúng tôi</a>
 							</li>
 
 							<li>
-								<a href="contact.php" id="contactt">Contact</a>
+								<a href="contact.php" id="contactt">Liên hệ</a>
 							</li>
 						</ul>
 					</div>	
