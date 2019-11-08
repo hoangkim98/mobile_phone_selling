@@ -22,16 +22,11 @@
         $stmt->execute();
       
       if ($stmt){
-        $errorCode = $stmt->errorCode();
-        if ($errorCode != 00000) {
-          $statusMsgType = 'alert alert-danger';
-          $statusMsg = '[Database] Something went wrong.';
-        }
-        else{
+        
         //   $statusMsgType = 'alert alert-success';
         //   $statusMsg = 'Congratulation. Add successful. Click <a href="tables.php">here</a> to view';
             header("Location: tables.php");
-        }
+        
       }
       else{
         $statusMsgType = 'alert alert-danger';
