@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 08, 2019 at 05:25 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Host: localhost
+-- Generation Time: Nov 09, 2019 at 03:42 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.1.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `assignment`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(10) NOT NULL,
+  `adname` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `adname`, `password`, `email`) VALUES
+(1, 'hoangkim', '74186d756dfb6ecf9f242b7902837d6a', 'hoangkimcse@gmail.com'),
+(2, 'hoangkim', '74186d756dfb6ecf9f242b7902837d6a', 'hoangkim@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -250,6 +271,12 @@ INSERT INTO `users` (`id`, `userName`, `password`, `email`, `forgot_pass_identit
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
@@ -289,6 +316,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `category`

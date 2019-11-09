@@ -107,7 +107,7 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
           <ul class="list-unstyled">
-                    <li><a href="tables.php"> <i class="icon-home"></i>Home </a></li>
+                    <li><a href="../index.php"> <i class="icon-home"></i>Home </a></li>
                     <li class="active"><a href="tables.php"> <i class="icon-grid"></i>Tables </a></li>
                     <!-- <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li> -->
                     <li><a href="login.php"> <i class="icon-interface-windows"></i>Login page </a></li>
