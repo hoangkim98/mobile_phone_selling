@@ -4,37 +4,37 @@
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						How Can We Help?
+						Giúp đỡ
 					</h4>
 
 					<ul>
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Delivery
+								Dịch vụ vận chuyển
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Gift Cards
+								Thẻ quà tặng
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Size Guides
+								Hướng dẫn chọn điện thoại
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Women's Plus Size Guide
+								Chọn điện thoại cho nữ giới
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Store Locator
+								Xem cửa hàng
 							</a>
 						</li>
 					</ul>
@@ -42,25 +42,25 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Help
+						Câu hỏi 
 					</h4>
 
 					<ul>
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Track Order
+								Kiểm tra đơn hàng
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Returns 
+								Đổi trả 
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shipping
+								Vận chuyển
 							</a>
 						</li>
 
@@ -74,11 +74,11 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Contact
+						Liên hệ
 					</h4>
 
 					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in Laboratory 602 at 6th floor, BachKhoa University or email us: support@hcmut.edu.vn
+						Vui lòng liên hệ qua email phoneshark@gmail.com
 					</p>
 
 					<div class="p-t-27">
@@ -98,7 +98,7 @@
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Newsletter
+						Đăng ký nhận khuyến mãi
 					</h4>
 
 					<form>
@@ -140,7 +140,7 @@
 				</div>
 
 				<p class="stext-107 cl6 txt-center">
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">Template</a>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">OurTeam</a>
 				</p>
 			</div>
 		</div>

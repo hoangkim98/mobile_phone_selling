@@ -5,27 +5,27 @@
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-						All Products
+						Tất cả sản phẩm
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-						Women
+						Iphone
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-						Men
+						Oppo
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-						Bag
+						Samsung
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-						Shoes
+						Xiaomi
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-						Watches
+						Phụ kiện
 					</button>
 				</div>
 
@@ -59,43 +59,43 @@
 					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
 						<div class="filter-col1 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Sort By
+								Sắp xếp theo
 							</div>
 
 							<ul>
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Default
+										Mặc định
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Popularity
+										Phổ biến
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Average rating
+										Đánh giá
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Newness
+										Mới nhất
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Price: Low to High
+										Giá: Thấp đến cao
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Price: High to Low
+										Giá: Cao đến thấp
 									</a>
 								</li>
 							</ul>
@@ -103,13 +103,13 @@
 
 						<div class="filter-col2 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Price
+								Giá 
 							</div>
 
 							<ul>
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										All
+										Tât cả
 									</a>
 								</li>
 
@@ -147,7 +147,7 @@
 
 						<div class="filter-col3 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Color
+								Màu sắc
 							</div>
 
 							<ul>
@@ -157,7 +157,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										Black
+										Đen
 									</a>
 								</li>
 
@@ -167,7 +167,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Blue
+										Xanh da trời
 									</a>
 								</li>
 
@@ -177,7 +177,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										Grey
+										Xám
 									</a>
 								</li>
 
@@ -187,7 +187,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										Green
+										Xanh lá cây
 									</a>
 								</li>
 
@@ -197,7 +197,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										Red
+										Đỏ
 									</a>
 								</li>
 
@@ -207,7 +207,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										White
+										Trắng
 									</a>
 								</li>
 							</ul>
@@ -215,28 +215,28 @@
 
 						<div class="filter-col4 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Tags
+								Thẻ
 							</div>
 
 							<div class="flex-w p-t-4 m-r--5">
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Fashion
+									Thời trang
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Lifestyle
+									Phong cách
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Denim
+									Năng động
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Streetstyle
+									Tiết kiệm
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Crafts
+									Trẻ trung
 								</a>
 							</div>
 						</div>
@@ -267,7 +267,7 @@
 						echo '';
 						$send_id = '"'.$id.'"';
 						echo '<a href="#" id='.$send_id.' class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">';
-						echo 'Quick View';
+						echo 'Xem nhanh';
 						echo '</a>';
 						echo '</div>';
 						echo '';
