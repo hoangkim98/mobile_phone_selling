@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 07, 2019 at 03:22 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.1.32
+-- Host: 127.0.0.1
+-- Generation Time: Nov 08, 2019 at 05:25 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -105,20 +105,23 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `kind`, `created`, `modified`) VALUES
-(1, 'Lightweight Jacket', 'Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.', '58.79', '1', '2018-12-04 15:36:18', '2018-12-04 15:36:18'),
+(1, 'Điện thoại iPhone 7 Plus 32GB', 'Màn hình:	LED-backlit IPS LCD, 5.5\", Retina HD <br>\r\n\r\nHệ điều hành:	iOS 12 <br>\r\n\r\nCamera sau:	Chính 12 MP & Phụ 12 MP\r\n<br>\r\nCamera trước:	7 MP\r\n<br>\r\nCPU:	Apple A10 Fusion 4 nhân 64-bit\r\n<br>\r\nRAM:	3 GB\r\n<br>\r\nBộ nhớ trong:	32 GB\r\n<br>\r\nThẻ SIM:\r\n1 Nano SIM, Hỗ trợ 4G', '58.79', '1', '2018-12-04 15:36:18', '2018-12-04 15:36:18'),
 (27, 'San Antonio Spurs Kawhi Leonard #2 \nAdidas Black T-Shirt', '&lt;p&gt;Kawhi Leonard San Antonio Spurs T shirt, made by Adidas the official on court producers of NBA apparel and jerseys.&lt;/p&gt;\r\n&lt;p&gt;Leonard and 2 are printed on the back in authentic font.&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;Basic Print&lt;/li&gt;\r\n&lt;li&gt;Officially licensed NBA Product&lt;/li&gt;\r\n&lt;li&gt;NBA Hologram Sticker&lt;/li&gt;\r\n&lt;li&gt;Mens Sizing&lt;/li&gt;\r\n&lt;li&gt;100% Cotton&lt;/li&gt;\r\n&lt;li&gt;Adidas &quot;Go To Tee&quot;&lt;/li&gt;\r\n&lt;/ul&gt;', '99.99', '2', '2016-10-28 20:49:40', '2016-10-28 05:49:40'),
-(28, 'LaMarcus Aldridge San Antonio Spurs NBA Adidas Player Black T-Shirt', '&lt;p&gt;Looks like a jersey, wears like a tee -- this 100% cotton Adidas NBA player name and number t-shirt sports screen prints of your favorite player\'s name and number, plus team graphics on the chest.&lt;/p&gt;\r\n&lt;p&gt;Officially licensed by the NBA.&lt;/p&gt;', '49.99', '3', '2016-10-28 20:52:43', '2016-10-28 05:52:43'),
-(29, 'Tim Duncan San Antonio Spurs Jersey Name and Number T-Shirt', '&lt;p&gt;Cheer on Tim Duncan and the Spurs as they begin their road to repeating as NBA champions.&lt;/p&gt;\r\n&lt;p&gt;Show your support for Duncan and the San Antonio Spurs in your very own black Spurs Name and Number Tee.&lt;/p&gt;', '39.99', '4', '2016-10-28 20:56:23', '2016-10-28 05:56:23'),
-(30, 'Women\'s Customized San Antonio Spurs Black Replica Basketball Jersey', '&lt;p&gt;San Antonio Spurs Custom Jerseys with any name and number.&lt;/p&gt;\r\n&lt;p&gt;Choose the style and size.&lt;/p&gt;\r\n&lt;p&gt;There\'s no better way to prove your loyalty than to make this jersey your own.&lt;/p&gt;', '45.99', '5', '2016-10-28 20:58:02', '2016-10-28 05:58:02'),
-(31, 'Klay Thompson Golden State Warriors Jersey Name and Number T-Shirt', '&lt;p&gt;It\'s Splash Time!&lt;/p&gt;\r\n&lt;p&gt;Make sure to show your support for the second half of the splash bros and get your very own Warriors Name and Number Tee.&lt;/p&gt;', '29.99', '1', '2016-10-28 20:59:20', '2016-10-28 05:59:20'),
-(32, 'Stephen Curry Golden State Warriors #30 NBA Youth Climalite Player T-Shirt Blue', '&lt;p&gt;Featuring your favorite player\'s name and number on back with team logo at front, this Climalite polyester t-shirt provides the ultimate display of pride for a die-hard fan!&lt;/p&gt;', '29.99', '1', '2016-10-28 21:03:19', '2016-10-28 06:03:19'),
-(33, 'Adidas Men\'s NBA Golden State Warriors-Kevin Durant #35-Mesh Logo T-Shirt', '&lt;p&gt;Show off how excited you are to welcome Kevin Durant to you Golden State Warriors with this Mesh Logo Tee from adidas.&lt;/p&gt;\r\n&lt;p&gt;It features cool graphics made from jersey like mesh and has KD\'s name and number on the back.&lt;/p&gt;\r\n&lt;p&gt;A great look, whether you\'re at the game, or a friends house watching the new look Warriors.&lt;/p&gt;', '29.99', '1', '2016-10-28 21:05:30', '2016-10-28 06:05:30'),
-(34, 'Klay Thompson Golden State Warriors Charcoal Chinese New Year Name and Number T-shirt', '&lt;p&gt;Cheer on Klay all the way to the NBA Finals in style with this unique Chinese New Year Jersey Name and Number t-shirt by adidas.&lt;/p&gt;', '29.99', '2', '2016-10-28 21:06:34', '2016-10-28 06:06:34'),
-(35, 'Kevin Durant #35 Women\'s Replica Name and Number Short Sleeve', '&lt;p&gt;Let everyone know who you will be cheering for this season in the adidas U Series high density name &amp;amp; number tee.&lt;/p&gt;\r\n&lt;p&gt;Adidas is the official outfitter of the NBA and this tee is the authentic take down name &amp;amp; number tee of your MVP.&lt;/p&gt;\r\n&lt;p&gt;A high density screen print on a soft cotton tee is a must have for every true NBA fan.&lt;/p&gt;', '32.24', '2', '2016-10-28 21:08:05', '2016-10-28 06:08:05'),
-(36, 'LeBron James Men\'s Navy Cleveland Cavaliers adidas Swingman Jersey', '&lt;p&gt;Prove you are the #1 LeBron James fan with this Swingman jersey from adidas!&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;This Swingman is the ultimate Cleveland Cavaliers jersey. Whether it\'s going to the game, spending time with your friends or anything in-between - this jersey does it all.&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;The Swingman includes adidas Climacool &amp;reg; performance mesh fabrication and one layer twill wordmark, name &amp;amp; number applications.&amp;nbsp;&lt;/p&gt;\r\n&lt;p&gt;The NBA Swingman jersey - the most authentic Swingman ever made.&lt;/p&gt;', '109.93', '2', '2016-10-28 21:08:52', '2016-10-28 06:08:52'),
-(37, 'NBA Cleveland Cavaliers Kyrie Irving #2 Men\'s Replica Jersey', '&lt;p&gt;Detailed to look like a real NBA jersey and priced to make you cheer!&lt;/p&gt;\r\n&lt;p&gt;This quality NBA Adidas Replica Revolution Jersey features screen printed team graphic, screen printed player name and number on the front and back, tagless collar, and embroidered Adidas and NBA logo\'s on the front.&lt;/p&gt;\r\n&lt;p&gt;This new style Adidas replica jersey is made of breathable, easy-care 100% polyester with Clima Cool fabrication. Officially licensed by the NBA.&lt;/p&gt;', '46.99', '2', '2016-10-28 21:09:44', '2016-10-28 06:09:44'),
-(38, 'Kevin Love Cleveland Cavaliers #0 NBA Youth Road Jersey Wine', '&lt;p&gt;Detailed to look like a real NBA jersey, sized for a youth, and priced to make you cheer!&lt;/p&gt;\r\n&lt;p&gt;This quality NBA Adidas Replica Jersey features screen printed team graphic, screen printed player name and number on the front and back, tagless collar, and embroidered Adidas and NBA logo\'s on the front.&lt;/p&gt;\r\n&lt;p&gt;Perfect for your child or for gift giving. Made of breathable, easy-care 100% polyester with Clima Cool fabrication. Officially licensed by the NBA.', '29.99', '3', '2016-10-28 21:46:06', '2016-10-28 06:46:06'),
-(40, 'For Mens San Antonio Spurs Kawhi Leonard #2 Cream White Christmas Day Swingman Basketball Jersey', '&lt;p&gt;This is 100% mesh polyester breathable and quick-dry jersey.&lt;/p&gt;\r\n&lt;p&gt;Player name and number graphics deliver classic style. priced to make you cheer.&lt;/p&gt;\r\n&lt;p&gt;It will be the best gift for you or your friend and family.&lt;/p&gt;', '32.00', '3', '2016-11-02 20:15:38', '2016-11-02 05:15:38');
+(28, 'dien thoai sam sung', '&lt;p&gt;Looks like a jersey, wears like a tee -- this 100% cotton Adidas NBA player name and number t-shirt sports screen prints of your favorite player\'s name and number, plus team graphics on the chest.&lt;/p&gt;\r\n&lt;p&gt;Officially licensed by the NBA.&lt;/p&gt;', '49.99', '3', '2016-10-28 20:52:43', '2016-10-28 05:52:43'),
+(42, 'Điện thoại Xiaomi Redmi Note 8 Pro (6GB/64GB)', 'Thông số kỹ thuật <br>\r\nMàn hình:	IPS LCD, 6.53\", Full HD+<br>\r\nHệ điều hành:	Android 9.0 (Pie)<br>\r\nCamera sau:	Chính 64 MP & Phụ 8 MP, 2 MP, 2 MP<br>\r\nCamera trước:	20 MP<br>\r\nCPU:	Mediatek Helio G90T 8 nhân<br>\r\nRAM:	6 GB<br>\r\nBộ nhớ trong:	64 GB<br>\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB<br>\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng).<br> Giá từ 170.000đ<br>\r\nDung lượng pin:	4500 mAh, có sạc nhanh', '134.00', '4', '2019-11-04 00:00:00', '2019-11-21 17:00:00'),
+(44, 'Pin sạc dự phòng 5.000 mAh eSaver Safari 2S', 'Thông số kỹ thuật <br>\r\nHiệu suất sạc:	65%<br>\r\nDung lượng pin:	5.000 mAh<br>\r\nThời gian sạc đầy pin:	5 - 6 giờ (dùng <br>Adapter 1A)2 - 3 giờ (dùng Adapter 2.1A)\r\nNguồn vào:	Micro USB: 5V - 2A<br>\r\nNguồn ra:	USB 1: 5V - 1AUSB 2: 5V - 2.1A<br>\r\nLõi pin:	Pin Li-Ion<br>\r\nTiện ích:	Đèn LED báo hiệu<br>\r\nKích thước:	Dài 9.5 cm - ngang 4.8 cm - dày 2 cm<br>\r\nTrọng lượng:	200g<br>\r\nSản xuất tại:	Trung Quốc', '12.00', '5', '2019-11-03 00:00:00', '2019-11-27 17:00:00'),
+(31, 'Điện thoại iPhone Xs Max 64GB', 'Thông số kỹ thuật <br>\r\nMàn hình:	OLED, 6.5\", Super Retina<br>\r\nHệ điều hành:	iOS 12<br>\r\nCamera sau:	Chính 12 MP & Phụ 12 MP<br>\r\nCamera trước:	7 MP<br>\r\nCPU:	Apple A12 Bionic 6 nhân<br>\r\nRAM:	4 GB<br>\r\nBộ nhớ trong:	64 GB<br>\r\nThẻ SIM:\r\nNano SIM & eSIM, Hỗ trợ 4G<br>\r\n\r\nDung lượng pin:	3174 mAh, có sạc nhanh', '29.99', '1', '2016-10-28 20:59:20', '2016-10-28 05:59:20'),
+(32, 'Điện thoại iPhone 11 Pro Max 64GB\r\n', 'Thông số kỹ thuật <br>\r\nMàn hình:	OLED, 6.5\", Super Retina XDR<br>\r\nHệ điều hành:	iOS 13<br>\r\nCamera sau:	3 camera 12 MP<br>\r\nCamera trước:	12 MP<br>\r\nCPU:	Apple A13 Bionic 6 nhân<br>\r\nRAM:	4 GB<br>\r\nBộ nhớ trong:	64 GB<br>\r\nThẻ SIM:\r\nNano SIM & eSIM, Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng). <br>Giá từ 170.000đ<br>\r\nDung lượng pin:	3969 mAh, có sạc nhanh', '29.99', '1', '2016-10-28 21:03:19', '2016-10-28 06:03:19'),
+(33, 'Điện thoại iPhone 8 Plus 64GB', 'Thông số kỹ thuật <br>\r\nMàn hình:	LED-backlit IPS LCD, 5.5\", Retina HD<br>\r\nHệ điều hành:	iOS 12<br>\r\nCamera sau:	Chính 12 MP & Phụ 12 MP<br>\r\nCamera trước:	7 MP<br>\r\nCPU:	Apple A11 Bionic 6 nhân<br>\r\nRAM:	3 GB<br>\r\nBộ nhớ trong:	64 GB<br>\r\nThẻ SIM:\r\n1 Nano SIM, Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng).<br> Giá từ 170.000đ<br>\r\nDung lượng pin:	2691 mAh, có sạc nhanh', '29.99', '1', '2016-10-28 21:05:30', '2016-10-28 06:05:30'),
+(34, 'Điện thoại OPPO K3', 'Thông số kỹ thuật <br>\r\nMàn hình:	AMOLED, 6.5\", Full HD+<br>\r\nHệ điều hành:	Android 9.0 (Pie)<br>\r\nCamera sau:	Chính 16 MP & Phụ 2 MP<br>\r\nCamera trước:	16 MP<br>\r\nCPU:	Snapdragon 710 8 nhân 64-bit<br>\r\nRAM:	6 GB<br>\r\nBộ nhớ trong:	64 GB<br>\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng). <br>Giá từ 170.000đ<br>\r\nDung lượng pin:	3765 mAh, có sạc nhanh', '29.99', '2', '2016-10-28 21:06:34', '2016-10-28 06:06:34'),
+(35, 'Điện thoại OPPO Reno2 F', 'Thông số kỹ thuật <br>\r\nMàn hình:	AMOLED, 6.53\", Full HD+<br>\r\nHệ điều hành:	Android 9.0 (Pie)<br>\r\nCamera sau:	Chính 48 MP & Phụ 8 MP, 2 MP, 2 MP<br>\r\nCamera trước:	16 MP<br>\r\nCPU:	MediaTek Helio P70 8 nhân<br>\r\nRAM:	8 GB<br>\r\nBộ nhớ trong:	128 GB<br>\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB<br>\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng). <br>Giá từ 170.000đ<br>\r\nDung lượng pin:	4000 mAh, có sạc nhanh', '32.24', '2', '2016-10-28 21:08:05', '2016-10-28 06:08:05'),
+(36, 'Điện thoại OPPO A5s', 'Thông số kỹ thuật <br>\r\nMàn hình:	IPS LCD, 6.2\", HD+<br>\r\nHệ điều hành:	Android 8.1 (Oreo)<br>\r\nCamera sau:	Chính 13 MP & Phụ 2 MP<br>\r\nCamera trước:	8 MP<br>\r\nCPU:	MediaTek Helio P35 8 nhân 64-bit<br>\r\nRAM:	3 GB<br>\r\nBộ nhớ trong:	32 GB<br>\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB<br>\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng).<br> Giá từ 170.000đ<br>\r\nDung lượng pin:	4230 mAh', '109.93', '2', '2016-10-28 21:08:52', '2016-10-28 06:08:52'),
+(37, 'Điện thoại OPPO F11 Pro 128GB', 'Thông số kỹ thuật <br>\r\nMàn hình:	LTPS LCD, 6.5\", Full HD+<br>\r\nHệ điều hành:	Android 9.0 (Pie)<br>\r\nCamera sau:	Chính 48 MP & Phụ 5 MP<br>\r\nCamera trước:	16 MP<br>\r\nCPU:	MediaTek Helio P70 8 nhân<br>\r\nRAM:	6 GB<br>\r\nBộ nhớ trong:	128 GB<br>\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 256 GB<br>\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng).<br> Giá từ 170.000đ<br>\r\nDung lượng pin:	4000 mAh, có sạc nhanh', '46.99', '2', '2016-10-28 21:09:44', '2016-10-28 06:09:44'),
+(38, 'Điện thoại Samsung Galaxy A50 64GB', 'hông số kỹ thuật <br>\r\nMàn hình:	Super AMOLED, 6.4\", Full HD+<br>\r\nHệ điều hành:	Android 9.0 (Pie)<br>\r\nCamera sau:	Chính 25 MP & Phụ 8 MP, 5 MP<br>\r\nCamera trước:	25 MP<br>\r\nCPU:	Exynos 9610 8 nhân 64-bit<br>\r\nRAM:	4 GB<br>\r\nBộ nhớ trong:	64 GB<br>\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 512 GB<br>\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng).<br> Giá từ 170.000đ<br>\r\nDung lượng pin:	4000 mAh, có sạc nhanh', '29.99', '3', '2016-10-28 21:46:06', '2016-10-28 06:46:06'),
+(40, 'Điện thoại Samsung Galaxy Note 10+', 'Thông số kỹ thuật <br>\r\nMàn hình:	Dynamic AMOLED, 6.8\", Quad HD+ (2K+)<br>\r\nHệ điều hành:	Android 9.0 (Pie)<br>\r\nCamera sau:	Chính 12 MP & Phụ 12 MP, 16 MP, TOF 3D<br>\r\nCamera trước:	10 MP<br>\r\nCPU:	Exynos 9825 8 nhân 64-bit<br>\r\nRAM:	12 GB<br>\r\nBộ nhớ trong:	256 GB<br>\r\nThẻ nhớ:	MicroSD, hỗ trợ tối đa 1 TB<br>\r\nThẻ SIM:\r\n2 SIM Nano (SIM 2 chung khe thẻ nhớ), Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng).<br> Giá từ 170.000đ<br>\r\nDung lượng pin:	4300 mAh, có sạc nhanh', '32.00', '3', '2016-11-02 20:15:38', '2016-11-02 05:15:38'),
+(43, 'Điện thoại Xiaomi Mi 9T', 'Thông số kỹ thuật <br>\r\nMàn hình:	AMOLED, 6.39\", Full HD+<br>\r\nHệ điều hành:	Android 9.0 (Pie)<br>\r\nCamera sau:	Chính 48 MP & Phụ 13 MP, 8 MP<br>\r\nCamera trước:	20 MP<br>\r\nCPU:	Snapdragon 730 8 nhân<br>\r\nRAM:	6 GB<br>\r\nBộ nhớ trong:	64 GB<br>\r\nThẻ SIM:\r\n2 Nano SIM, Hỗ trợ 4G<br>\r\nHOTSIM Mobi Big 70 (3GB data/tháng).<br> Giá từ 170.000đ<br>\r\nDung lượng pin:	4000 mAh, có sạc nhanh', '87.00', '4', '2019-11-03 00:00:00', '2019-11-28 17:00:00'),
+(45, 'Tai nghe chụp tai Sony MDR-100AAPYCE\r\n', 'Thông số kỹ thuật <br>\r\nTương thích:	AndroidWindowsiOS (iPhone, iPad)Windows Phone<br>\r\nJack cắm:	3.5mm<br>\r\nĐộ dài dây:	1.2 m<br>\r\nKết nối cùng lúc:	1 thiết bị<br>\r\nPhím điều khiển:	Mic thoạiNghe/nhận cuộc gọiPhát/dừng chơi nhạcChuyển bài hát<br>\r\nThương hiệu của:	Sony<br>\r\nSản xuất tại:	Trung Quốc', '34.00', '5', '2019-11-03 00:00:00', '2019-11-28 17:00:00'),
+(46, 'Đế sạc không dây 9W Qi Type C Samsung EP-P1100 Đen\r\n', 'Thông số kỹ thuật <br>\r\nModel:	EP-P1100 <br>\r\nChức năng:	Sạc<br>\r\nĐầu vào:	Type C: 5V - 2A ,9V - 1.67A<br>\r\nĐầu ra:	Không dây: 5V - 1A ,10V - 0.9A<br>\r\nKích thước:	Đường kính: 9 cm, Dày 1.2 cm<br>\r\nThương hiệu của:	Hàn Quốc<br>\r\nSản xuất tại:	Việt Nam', '23.00', '5', '2019-11-03 00:00:00', '2019-11-26 17:00:00');
 
 -- --------------------------------------------------------
 
@@ -142,33 +145,33 @@ INSERT INTO `product_images` (`id`, `product_id`, `name`, `created`, `modified`)
 (105, 1, 'product-detail-01.jpg', '2018-12-05 10:38:00', '2018-12-04 15:38:41'),
 (106, 1, 'product-detail-02.jpg', '2018-12-04 15:39:12', '2018-12-04 15:39:12'),
 (107, 1, 'product-detail-03.jpg', '2018-12-04 15:39:36', '2018-12-04 15:39:36'),
-(83, 30, 'p41.jpg', '2016-10-28 20:58:02', '2016-10-28 05:58:02'),
+(83, 31, 'iphonexsmax3.jpg', '2016-10-28 20:58:02', '2019-11-08 03:03:06'),
 (82, 29, 'p32.jpg', '2016-10-28 20:56:23', '2016-10-28 05:56:23'),
 (81, 29, 'p31.jpg', '2016-10-28 20:56:23', '2016-10-28 05:56:23'),
 (80, 28, 'p22.jpg', '2016-10-28 20:52:43', '2016-10-28 05:52:43'),
 (79, 28, 'p21.jpg', '2016-10-28 20:52:43', '2016-10-28 05:52:43'),
 (77, 27, 'p11.jpg', '2016-10-28 20:49:40', '2016-10-28 05:49:40'),
 (78, 27, 'p12.jpg', '2016-10-28 20:49:40', '2016-10-28 05:49:40'),
-(84, 31, 'p51.jpg', '2016-10-28 20:59:20', '2016-10-28 05:59:20'),
-(85, 31, 'p52.jpg', '2016-10-28 20:59:20', '2016-10-28 05:59:20'),
-(86, 32, 'p61.jpg', '2016-10-28 21:03:19', '2016-10-28 06:03:19'),
-(87, 32, 'p62.jpg', '2016-10-28 21:03:19', '2016-10-28 06:03:19'),
-(89, 33, 'p71.jpg', '2016-10-28 21:05:30', '2016-10-28 06:05:30'),
-(90, 33, 'p72.jpg', '2016-10-28 21:05:30', '2016-10-28 06:05:30'),
-(91, 34, 'p81.jpg', '2016-10-28 21:06:34', '2016-10-28 06:06:34'),
-(92, 34, 'p82.jpg', '2016-10-28 21:06:34', '2016-10-28 06:06:34'),
-(93, 34, 'p83.jpg', '2016-10-28 21:06:34', '2016-10-28 06:06:34'),
-(94, 35, 'p91.jpg', '2016-10-28 21:08:05', '2016-10-28 06:08:05'),
-(95, 35, 'p92.jpg', '2016-10-28 21:08:05', '2016-10-28 06:08:05'),
-(96, 36, 'p101.jpg', '2016-10-28 21:08:52', '2016-10-28 06:08:52'),
-(97, 36, 'p102.jpg', '2016-10-28 21:08:52', '2016-10-28 06:08:52'),
-(98, 36, 'p103.jpg', '2016-10-28 21:08:52', '2016-10-28 06:08:52'),
-(99, 37, 'p111.jpg', '2016-10-28 21:09:44', '2016-10-28 06:09:44'),
-(100, 37, 'p112.jpg', '2016-10-28 21:09:44', '2016-10-28 06:09:44'),
-(101, 37, 'p113.jpg', '2016-10-28 21:09:44', '2016-10-28 06:09:44'),
-(102, 38, 'p121.jpg', '2016-10-28 21:46:06', '2016-10-28 06:46:06'),
-(103, 38, 'p122.jpg', '2016-10-28 21:46:06', '2016-10-28 06:46:06'),
-(104, 40, 'p131.jpg', '2016-11-02 20:15:38', '2016-11-02 05:15:38'),
+(84, 31, 'iphonexsmax1.jpg', '2016-10-28 20:59:20', '2019-11-08 02:52:24'),
+(85, 31, 'iphonexsmax2.jpg', '2016-10-28 20:59:20', '2019-11-08 03:04:46'),
+(86, 32, 'iphone11promax1.jpeg', '2016-10-28 21:03:19', '2019-11-08 03:08:59'),
+(87, 32, 'iphone11promax2.jpeg', '2016-10-28 21:03:19', '2019-11-08 03:08:17'),
+(89, 33, 'iphone8plus1.jpg', '2016-10-28 21:05:30', '2019-11-08 03:20:15'),
+(90, 33, 'iphone8plus2.jpg', '2016-10-28 21:05:30', '2019-11-08 03:21:10'),
+(91, 34, 'oppok31.png', '2016-10-28 21:06:34', '2019-11-08 03:38:06'),
+(92, 34, 'oppok32.jpg', '2016-10-28 21:06:34', '2019-11-08 03:38:27'),
+(93, 34, 'oppok33.png', '2016-10-28 21:06:34', '2019-11-08 03:38:21'),
+(94, 35, 'opporeno1.jpg', '2016-10-28 21:08:05', '2019-11-08 03:33:24'),
+(95, 35, 'opporeno3.jpg', '2016-10-28 21:08:05', '2019-11-08 03:32:58'),
+(96, 36, 'oppoa5s1.jpg', '2016-10-28 21:08:52', '2019-11-08 03:29:04'),
+(97, 36, 'oppoa5s2.jpg', '2016-10-28 21:08:52', '2019-11-08 03:29:09'),
+(98, 36, 'oppoa5s3.jpeg', '2016-10-28 21:08:52', '2019-11-08 03:30:00'),
+(99, 37, 'oppo11pro1.jpg', '2016-10-28 21:09:44', '2019-11-08 03:25:18'),
+(100, 37, 'oppo11pro2.jpg', '2016-10-28 21:09:44', '2019-11-08 03:26:17'),
+(101, 37, 'oppo11pro3.jpg', '2016-10-28 21:09:44', '2019-11-08 03:26:22'),
+(102, 38, 'samsunga501.png', '2016-10-28 21:46:06', '2019-11-08 03:47:36'),
+(103, 38, 'samsunga502.jpg', '2016-10-28 21:46:06', '2019-11-08 03:47:52'),
+(104, 40, 'samsungnote101.jpg', '2016-11-02 20:15:38', '2019-11-08 03:43:45'),
 (51, 14, 'gardman-r687-4-tier-mini-greenhouse-1.jpg', '0000-00-00 00:00:00', '2015-03-19 01:45:42'),
 (52, 14, 'gardman-r687-4-tier-mini-greenhouse-2.jpg', '0000-00-00 00:00:00', '2015-03-19 01:45:42'),
 (53, 15, 'spalding-nba-street-basketball-1.jpg', '0000-00-00 00:00:00', '2015-03-19 01:48:34'),
@@ -185,7 +188,28 @@ INSERT INTO `product_images` (`id`, `product_id`, `name`, `created`, `modified`)
 (69, 20, 'tp-link-mr3420-2.jpg', '2016-08-08 14:12:59', '2016-08-07 23:12:59'),
 (70, 21, 'd-link-universal-modem.jpg', '2016-08-08 14:24:19', '2016-08-07 23:24:19'),
 (75, 25, '29097235540_b2fefed80d_k.jpg', '2016-09-18 01:03:15', '2016-09-17 10:03:15'),
-(76, 20, 'aaa.png', '2016-10-13 16:31:58', '2016-10-13 01:31:58');
+(76, 20, 'aaa.png', '2016-10-13 16:31:58', '2016-10-13 01:31:58'),
+(109, 32, 'iphone11promax3.jpeg', '2019-11-13 00:00:00', '2019-11-08 03:16:27'),
+(110, 33, 'iphone8plus3.jpg', '2019-11-07 00:00:00', '2019-11-20 17:00:00'),
+(111, 35, 'opporeno2.jpg', '2019-11-05 00:00:00', '2019-11-20 17:00:00'),
+(112, 40, 'samsungnote102.jpg', '2019-11-05 00:00:00', '2019-11-21 17:00:00'),
+(113, 40, 'samsungnote103.jpg', '2019-11-07 00:00:00', '2019-11-29 17:00:00'),
+(114, 38, 'samsunga503.jpg', '2019-11-01 00:00:00', '2019-11-28 17:00:00'),
+(115, 42, 'xiaomi11.jpg', '2019-11-04 00:00:00', '2019-11-27 17:00:00'),
+(116, 42, 'xiaomi12.jpg', '2019-11-04 00:00:00', '2019-11-27 17:00:00'),
+(117, 42, 'xiaomi13.jpg', '2019-11-04 00:00:00', '2019-11-27 17:00:00'),
+(118, 43, 'xiaomi9t1.jpg', '2019-11-05 00:00:00', '2019-11-28 17:00:00'),
+(119, 43, 'xiaomi9t2.jpg', '2019-11-04 00:00:00', '2019-11-20 17:00:00'),
+(120, 43, 'xiaomi9t3.jpg', '2019-11-05 00:00:00', '2019-11-27 17:00:00'),
+(121, 44, 'phukien1.jpg', '2019-11-03 00:00:00', '2019-11-29 17:00:00'),
+(122, 44, 'phukien2.jpg', '2019-11-11 00:00:00', '2019-11-21 17:00:00'),
+(123, 44, 'phukien3.jpg', '2019-11-04 00:00:00', '2019-11-27 17:00:00'),
+(124, 45, 'tainghe1.jpg', '2019-11-03 00:00:00', '2019-11-26 17:00:00'),
+(125, 45, 'tainghe2.jpg', '2019-11-04 00:00:00', '2019-11-27 17:00:00'),
+(126, 45, 'tainghe3.jpg', '2019-11-03 00:00:00', '2019-11-18 17:00:00'),
+(127, 46, 'desac1.jpg', '2019-11-11 00:00:00', '2019-11-21 17:00:00'),
+(128, 46, 'desac2.jpg', '2019-11-04 00:00:00', '2019-11-19 17:00:00'),
+(129, 46, 'desac3.jpg', '2019-11-04 00:00:00', '2019-11-27 17:00:00');
 
 -- --------------------------------------------------------
 
@@ -218,7 +242,8 @@ INSERT INTO `users` (`id`, `userName`, `password`, `email`, `forgot_pass_identit
 (20, 'hcmut', 'e10adc3949ba59abbe56e057f20f883e', '1613594@hcmut.edu.vn', '0fc2388693f5b78b6baa1c7bf55d502a', 'Quang', 'Toan', 1, '2018-12-11 18:19:08'),
 (21, 'viethung', 'e10adc3949ba59abbe56e057f20f883e', 'viethungcse@gmail.com', '', 'Nguyen', 'Viet Hung', 1, '0000-00-00 00:00:00'),
 (22, 'thib', '827ccb0eea8a706c4c34a16891f84e7b', 'tranthib@gmail.com', '', 'Tran', 'Thi B', 1, '0000-00-00 00:00:00'),
-(23, 'thic', 'e10adc3949ba59abbe56e057f20f883e', 'thic@gmail.com', '', 'Phan Thi', 'CC', 1, '0000-00-00 00:00:00');
+(23, 'thic', 'e10adc3949ba59abbe56e057f20f883e', 'thic@gmail.com', '', 'Phan Thi', 'CC', 1, '0000-00-00 00:00:00'),
+(25, 'tuanbieber', '6af30782907da685bb7283eb5c44a490', 'championship1604@gmail.com', '', 'Nguyen', 'Tuan', 1, '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -281,19 +306,19 @@ ALTER TABLE `coupons`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

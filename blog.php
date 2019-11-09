@@ -81,9 +81,9 @@
 ?>
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image:  linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0)), url('images/bg-02.jpg');">
-		<h2 class="ltext-105 cl0 txt-center">
-			Blog - Nunc sagittis ligula sit amet odio
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image:  linear-gradient(rgba(0, 0, 1, 0), rgba(0, 0, 1, 0.0)), url('images/bg-03.jpg');">
+		<h2 class="ltext-105 cl4 txt-center">
+		Nên mua điện thoại di động hãng nào tốt và bền nhất hiện nay
 		</h2>
 	</section>	
 
